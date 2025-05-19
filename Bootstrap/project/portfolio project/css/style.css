@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+/* Home Section */
+.home {
+      
+    background: wheat;
+    height: 100%;
+}
+
+.home h1 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home h2 {
+    font-weight: 400;
+    color: var(--secondary-color);
+}
+
+.home img{
+    
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Section Titles */
+.about-section {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.about-section . {
+    width: 80px;
+    height: 4px;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Skills */
+.skill-card {
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s ;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    
+}
+
+/* Projects */
+.card {
+    transition:  0.3s ;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+#contactForm {
+    background-color: white;
+}
+
+.contact-info {
+    background-color: white;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    display: none;
+    text-decoration: none;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+     <div class="container">
+        <h1 class="fs-2">progress</h1>
+        <div class="progress mt-4">
+        <div class="progress-bar" style="width: 25%"></div>
+    </div>
+    <div class="progress mt-4">
+        <div class="progress-bar bg-info" style="width: 25%">25%</div>
+    </div>
+
+    <div class="progress mt-4" >
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 50%"> 50%</div>
+      </div>
+
+    <div class="progress-stacked mt-5">
+        <div class="progress " style="width: 25%;">
+            <div class="progress-bar" > 25%</div>
+        </div>
+
+        <div class="progress " style="width: 35%;">
+            <div class="progress-bar bg-success " >35%</div>
+        </div>
+
+        <div class="progress" style="width: 25%;">
+            <div class="progress-bar bg-info" >25%</div>
+        </div>
+
+    </div>
+
+    <h1 class="fs-1 mt-5">popover</h1>
+    <button class="btn btn-warning mt-3" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="hello ">
+        Popover 
+      </button>
+
+
+      <a class="btn btn-lg btn-danger ms-4" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title=" popover" data-bs-content="hello world"> popover</a>
+
+      <div class="d-inline-block" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content=" popover">
+        <button class="btn btn-primary"  disabled>Disabled popover</button>
+      </div>
+
+      <h1 class="fs-1 mt-5">tooltip</h1>
+      <button  class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="luv">
+        Tooltip 
+      </button>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        
+        // tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+</body>
+</html>
