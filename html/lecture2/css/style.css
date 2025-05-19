@@ -1,0 +1,14 @@
+body{
+    background-color: gray;
+    height: 100px;
+    color:white;
+}
+
+h1{
+    background-color: orange;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}

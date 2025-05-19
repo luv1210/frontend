@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+.container {
+    max-width: 1560px;
+    margin: auto;
+    padding: 15px 20px;
+}
+
+/* START NAVBAR */
+header {
+    background-image: url(./background.jpeg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.navbar-link {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    font-weight:900;
+    
+}
+
+.navbar-link nav ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    li a {
+       color: white;
+        padding:20px 30px;
+        display:flex;
+        align-items:center;
+
+    } 
+}
+
+.nav-btn ul li:nth-child(1) a {
+    display: block;
+    /* height: 50px;
+  width: 200px; */
+    padding:15px 25px;
+    background-color: white;
+    border-radius: 100px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.nav-btn ul li:nth-child(2) a {
+    color: white;
+    font-size: 25px;
+}
+
+.nav-btn ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 2px;
+}
+/* 
+.nav-btn ul li:nth-child(2) a {
+    display: flex;
+} */
+
+
+   .heading{
+    display: grid;
+    align-items: center;
+    font-size:28px;
+    color: white;
+   }
+
+   .description{
+    display: grid;
+    align-items: center;
+    /* font-size:28px; */
+    color: white;
+
+   }
+   .btn :nth-of-type(1) {
+    
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 100px;
+    color:#262b32;
+    font-size: 17px;
+
+   }
+   .btn :nth-of-type(2){
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: 1px solid;
+    border-color: white;
+    color: white;
+   }
+
+   .text{
+    
+  }

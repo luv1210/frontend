@@ -1,0 +1,88 @@
+.ref{
+    height: 700px;
+    width: 1500px;
+    border: 1px solid black;
+  }
+  
+  .anime{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+  }
+  
+  .anime{
+    animation-name: running1;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-timing-function: ease;
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite; 
+    animation-iteration-count: 2;
+     animation-direction: reverse; 
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+    animation-direction: normal;
+    animation-fill-mode: forwards; 
+    animation-fill-mode: backwards;
+    animation-play-state: paused;
+    animation-play-state: running;
+  }
+  
+  
+   @keyframes running1{
+    from{
+      transform: translate(0px);
+    }
+    to{
+     transform: translate(1400px);
+    }
+  }
+  
+  @keyframes running{
+    0%{
+      transform: translate(0px);
+    }
+    20%{
+      transform: translate(1400px);
+    }
+    40%{
+      transform: translate(1400px , 600px);
+    }
+    60%{
+      transform: translate(0px , 600px);
+    }
+    80%{
+      transform: translate(0px , 0px);
+    }
+    100%{
+      background-color: brown;
+    }
+  } 
+  
+  /* Css Filter Properties */
+  
+  .filter{
+    height: 600px;
+    width: 800px;
+    filter: blur(10px);
+    filter:brightness(100%);
+    filter:saturate(1000%);
+    filter:contrast(500%);
+    filter:sepia(100%);
+    filter:opacity(1);
+    filter:invert(100%);
+    filter:grayscale(100%);
+    filter:hue-rotate(450deg);
+    filter:url(../images/pexels-philippedonn.jpg)
+    filter:drop-shadow(10px 20px 2px gray);
+    box-shadow: 10px 20px 2px gray;
+  }
+  
+  img{
+    height: 100%;
+    width: 100%;
+  }

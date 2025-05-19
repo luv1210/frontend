@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.absolutecontent{
+    height: 50px;
+    width: 50px;
+    background-color: greenyellow;
+    position: absolute;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    margin-inline:auto;
+    margin-block:auto; 
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .absolutecontent i{
+    font-size: 20px;
+  }
+  
+  section{
+    height: 100vh;
+    border:2px solid black;
+  }
+  
+  section:nth-child(1){
+    background-color:greenyellow;
+  }
+  
+  section:nth-child(2){
+    background-color: salmon;
+  }
+  
+  section:nth-child(3){
+    background-color: orange;
+  }

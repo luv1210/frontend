@@ -1,0 +1,47 @@
+.vt-align{
+    font-size: 100px;
+    text-transform: capitalize;
+    /* text-transform: uppercase;
+    text-transform: lowercase; */
+}
+
+
+.box{
+    height: 400px;
+    width: 300px;
+    background-color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+    padding: 20px;
+    visibility: collapse;
+    visibility: hidden;
+    visibility: visible;
+    /* display: none; */
+}
+
+
+
+
+.mainbox{
+    height: 500px;
+    width: 500px;
+}
+
+.maindiv{
+    height: 100%;
+    width: 100%;
+}
+
+.width{
+    height: 100%;
+    width: 100%;
+    background-color:rgb(243, 164, 18);  
+}
+                                                                    
+span{
+    height:100px;
+    width:100px;
+    background-color:blue;
+    display: block;
+}

@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  
+  
+   .bg-color{
+      height: 500px;
+      width: 500px;
+      padding: 50px;
+      border:20px solid transparent;
+      background-color: rgba(55 , 45 , 125 , 1);
+      background-clip: border-box;
+      background-clip: padding-box;
+      background-clip: content-box;
+      background-clip: text;
+      font-size: 100px;
+      font-weight: bold;
+      color:transparent
+  } 
+  
+  .bg-img {
+     height: 600px;
+      width: 600px; 
+    background-image: url(../img-1.jpg);
+    background-image: url(../img.jpg);
+      background-repeat: no-repeat;  
+     background-repeat: repeat-x;
+      background-repeat: repeat-y;
+      background-repeat: round;
+      background-repeat: space;
+      background-repeat: repeat;  
+    background-size: contain;
+     background-size: cover;
+      background-position:bottom;
+      padding: 50px;
+      border:20px solid transparent;
+      background-origin: border-box;
+      background-origin: padding-box;
+      background-origin: content-box;
+      font-size: 200px;
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:transparent;
+      background-clip:text; 
+  }
+   
+   .bg-attech{
+      height: 70vh;
+      background-image: url(../img-2.jpg);
+      background-attachment: fixed;
+      background-attachment: scroll;
+  } 
+  
+   body{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+  } 
+  
+  .bg-blend {
+      height: 50vh;
+      width: 600px;
+      background-color: purple; 
+    background-image: url(../img-2.jpg) , url(../img.jpg);
+     background-image: url(../img-2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-size: cover;
+      background-blend-mode: color;
+      background-blend-mode: color-burn;
+      background-blend-mode: color-dodge;
+      background-blend-mode: darken;
+      background-blend-mode: difference;  
+      }
+  
+  .bg-gradiant {
+    height: 100vh;
+    background: rgb(2,0,36); 
+    background: linear-gradient(142deg, rgba(2,0,36,1) 0%, rgba(8,144,204,0) 47%, rgba(0,212,255,1) 60%);
+    background-image: linear-gradient(to bottom, orange , white , green);
+  }

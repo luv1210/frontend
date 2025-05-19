@@ -1,0 +1,40 @@
+
+h1{
+    background-color: unset !important;
+}
+
+h1{
+    background-color: yellow;
+}
+
+.heading{
+    background-color: purple !important;
+} 
+.heading{
+    background-color: unset;
+} 
+#demo{
+    background-color: brown;
+} 
+#demo{
+    background-color: unset;
+}
+
+
+
+ a[target="_blank"]{
+    background-color: blue;
+}
+
+a[target]{
+    background-color:red;
+}
+
+a[href="https://www.instagram.com"]{
+    text-decoration: none;
+}
+
+
+a[href^="https"]{
+    text-decoration: none;
+}  

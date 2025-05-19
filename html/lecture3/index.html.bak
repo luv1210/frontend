@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lecture 3</title>
+	</head>
+	<body>
+	<ol start="" type="">
+        <li>Apple</li>
+        <li>mango</li>
+        <li>banana</li>
+	</ol>
+	
+	  <ul>
+        <li>Apple</li>
+        <li>watermelon</li>
+        <li>kiwi</li>
+        <li>mango</li>
+		</ul>
+		
+		   <dl>
+        <dt>Fruits</dt>
+        <dd>Apple</dd>
+        <dd>mango</dd>
+        <dd>banana</dd>
+		<dt>browsers</dt>
+		<dd>chrome</dd>
+		<dd>safari</dd>
+		</dl>
+		
+	<ol>
+        <li>Option-1</li>
+        <li>
+        <ul>
+        <li>Option-2</li>
+        <li>Option-3</li>
+        <li>
+        <dl>
+        <dt>Options</dt>
+        <dd>Option-4</dd>
+        </dl>
+        </li>
+        </ul>
+        </li>
+    </ol>
+		
+		<input type="text" name="" id=""><br>
+		<input type="checkbox" name="" id=""><br>
+		<input type="checkbox" name="" id=""><br>
+		<input type="checkbox" name="" id=""><br>
+		<input type="checkbox" name="" id=""><br>
+		<input type="radio" name="" id=""><br>
+		<input type="radio" name="" id=""><br>
+		<input type="submit" value="submit"><br>
+		<input type="reset" value="reset"><br>
+		 <input type="password" name="" id=""><br>
+	</body>
+</html>	
