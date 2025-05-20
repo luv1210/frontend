@@ -1,46 +1,3 @@
-// arthmatic operator
-
-//  + , - , * , / , %  , ++ , -- 
-
-
-// console.log(10+5);
-// console.log(10-5);
-// console.log(10*5);
-// console.log(10/5);
-// console.log(10%5);
-
-// let a=10;
-// a++;
-// console.log(a)
-
-
-// console.log(++a)
-
-
-// comperison operator
-
-//  < , <= , > , >= , == , != , === , !==
-
-
-// console.log(10 < 50);
-// console.log(10 <= 50);
-// console.log(10 > 5);
-// console.log(10 >= 15);
-// console.log(10 == 5);
-// console.log(10 != 5);
-// console.log(10 === 10);
-// console.log(10 !== 10);
-
-
-// logical operator
-
-//  !  &&  ||
-
-// console.log(10>5 && 10<19)
-// console.log(10>15 && 10<19)
-// console.log(10>5 || 10<19)
-// console.log(10>50 || 10<19)
-
 // let a=20,b=50;
 
 // console.log("before swapping a&b");
@@ -181,7 +138,50 @@
 
 // 1. 
 
-let a=30 ,b=20; 
+// let a=10 ,b=20; 
 
-answer = (a-b) * (a+b);
-// console.log("answer is=",answer);
+//  total=( a*a)-(b*b );  
+//  total2=(a-b)*(a+b);                          
+//  console.log("total is=",total);
+//  console.log("total2 is=",total2);
+
+
+// 2
+
+// let a=10 ,b=20;
+
+// total=(a-b)*(a-b);
+// total2=(a*a)-2*a*b+(b*b);
+// console.log("resulte is=",total);
+// console.log("resulte2 is=",total2);
+
+
+// 3
+
+// let  a=10 ,b=30 ,c=20;
+
+// total=(a+b+c)*(a+b+c);
+// total2=(a*a)+(b*b)+(c*c)+(2*a*b)+(2*a*c)+(2*b*c);
+// console.log("resulte is=",total);
+// console.log("resulte2 is=",total2);
+
+
+// 4
+
+// let a=10 ,b=30 ,c=20;
+
+// total=(a+b+c)*(a+b+c);
+// total2=(a*a)+(b*b)+(c*c)-(2*a*b)-(2*a*c)+(2*b*c);
+// console.log("resulte is=",total);
+// console.log("resulte2 is=",total2);
+
+
+
+// 5
+
+// let a=10 , b=20 ;
+
+// total=(a-b)*(a-b)*(a-b);
+// total2=(a*a*a)-(3*a*a*b)+(3*a*b*b)-(b*b*b);
+// console.log("resulte is=",total);
+// console.log("resulte2 is=",total2);
