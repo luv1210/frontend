@@ -3,21 +3,21 @@
 
 // 1. ELECTRICITY
 
-// let units = 170, bill;
+let units = 170, bill;
 
-// if (units <= 50) {
-//   bill = units * 1;
-// } else if (units <= 150) {
-//   bill = units * 2;
-// } else if (units<=250){
-//   bill = units * 3;
-// }else{
-//  bill=units*4;
-// }
-// if (bill > 150) {
-//   bill += bill * 20 / 100;
-// }
-// console.log("your bill is=", bill);
+if (units <= 50) {
+  bill = units * 1;
+} else if (units <= 150) {
+  bill = units * 2;
+} else if (units<=250){
+  bill = units * 3;
+}else{
+ bill=units*4;
+}
+if (bill > 150) {
+  bill += bill * 20 / 100;
+}
+console.log("your bill is=", bill);
 
 
 // output :
