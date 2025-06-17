@@ -90,8 +90,8 @@
 
 // 5.
 // let numbers = [-23,-20,-17, -12, -5, 0, 1, 5, 12, 19, 20]; 
-    // let positivenumber = numbers.filter((element)=> element >0)
-    //    console.log(positivenumber)
+//     let positivenumber = numbers.filter((element)=> element >0)
+//        console.log(positivenumber)
 
       // OUTPUT 
       // [1,5,12,19,20];
@@ -231,4 +231,4 @@
 // console.log(arr.join(","))
 
 // OUTPUT:
-/ 5,32, Daniel 
+//  5,32, Daniel 

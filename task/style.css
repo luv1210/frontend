@@ -1,81 +1,190 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 56px; /* For fixed navbar */
 }
 
-.mainbox {
-    height: 100vh;
-    border: 2px solid black;
+section {
+    padding: 80px 0;
 }
 
-.mainbox div {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: auto;
+h2 {
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
     position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #0d6efd;
 }
 
-.mainbox div>div {
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-icons a {
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+/* About Section */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #0d6efd;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    border: 2px solid white;
+}
+
+/* Skills Section */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section */
+.project-card {
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    transition: transform 0.5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-info i {
     width: 50px;
     height: 50px;
-    border: 1px solid black;
-    margin: auto;
-    position: absolute;
-    background-color:gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
 }
 
-.mainbox>div:nth-child(1) {
-    background-color: olive;
+/* Footer */
+footer {
+    padding: 20px 0;
 }
 
-.mainbox>div:nth-child(2) ,.sub-box-2 {
-    background-color: palegreen;
-    top: 0px;
-    right: 0;
-    left: 0;
+/* Media Queries */
+@media (max-width: 992px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 }
 
-.mainbox>div:nth-child(3) ,.sub-box-3 {
-    background-color: navy;
-    right: 0px;
-    top: 0px;
+@media (max-width: 768px) {
+    section {
+        padding: 50px 0;
+    text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .timeline {
+        padding-left: 0;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    
+    h2::after {
+        width: 60px;
+    }
 }
 
-.mainbox>div:nth-child(4),.sub-box-4 {
-    background-color:orchid;
-    left: 0px;
-    top: 0;
-    bottom: 0;
-}
-
-.mainbox>div:nth-child(5),.sub-box-5 {
-    background-color: darkcyan;
-    inset: 0;
-}
-
-.mainbox>div:nth-child(6),.sub-box-6 {
-    background-color: firebrick;
-    right: 0px;
-    top: 0;
-    bottom: 0;
-}
-
-.mainbox>div:nth-child(7) ,.sub-box-7 {
-    background-color: burlywood;
-    left: 0;
-    bottom: 0px;
-}
-
-.mainbox>div:nth-child(8) ,.sub-box-8{
-    background-color:indianred;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-}
-
-.mainbox>div:nth-child(9),.sub-box-9 {
-    background-color:red;
-    right: 0;
-    bottom: 0px;
+@media (max-width: 576px) {
+    section {
+        padding: 40px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .social-icons a i {
+        font-size: 1.5rem;
+    }
 }
