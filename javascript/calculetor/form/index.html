@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
+  <title>JS Form Validation</title>
+  <style>
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    input {
+      margin-bottom: 5px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <script></script>
+
+  <h2>Registration Form</h2>
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" />
+    <div id="nameError" class="error"></div>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" />
+    <div id="emailError" class="error"></div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" />
+    <div id="passwordError" class="error"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="index.js"></script>
+
 </body>
 </html>
