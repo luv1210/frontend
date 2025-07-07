@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vowel counter</title>
+</head>
+
+<style>
+
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+</style>
+<body>
+
+    <div align="center">
+        <h1>vowel charactor counter</h1>
+         <textarea id="textInput"  placeholder="Type here..."></textarea>
+        <br />
+        <button onclick="countVowels()">Count Vowels</button>
+        <p id="result">Vowel count will appear here</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

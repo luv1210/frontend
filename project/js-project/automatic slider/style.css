@@ -8,12 +8,12 @@
 .images{
     margin-top: 45px;
     height: 500px;
-    width: 1200px;
+    width: 900px;
     display: block;
     border-radius: 10px;
     border: 1px solid white;
     object-fit: cover;
-    animation-name: slider;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-in;
+    /* animation-name: slider; */
+    /* animation-duration: 1000ms; */
+    /* animation-timing-function: ease-in; */
 }

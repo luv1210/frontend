@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random String Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px;
+}
+
+.container {
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+  word-break: break-word;
+}
+
+</style>
+<body>
+  <div class="container">
+    <h2> Random String Generator</h2>
+    <button onclick="generateString()">Generate String</button>
+    <p id="result">Your string will appear here</p>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

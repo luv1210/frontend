@@ -6,7 +6,7 @@
             let birthdayInput = document.getElementById('birthday').value;
             
             if (!birthdayInput) {
-                alert('Please enter your birthday!');
+                alert('Please enter your birthday');
                 return;
             }
             

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+body {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form table {
+  background-color: white;
+  border-collapse: collapse;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form th {
+  text-align: left;
+  padding: 10px;
+}
+
+form input {
+  width: 200px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+margin-left: 100px;
+ padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+#info {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#info th,
+#info td {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+#info thead {
+  background-color: #007bff;
+  color: white;
+}
+
+button.edit-btn,
+button.delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button.edit-btn {
+  background-color: #28a745;
+}
+
+button.edit-btn:hover {
+  background-color: #1e7e34;
+}
+
+button.delete-btn {
+  background-color: #dc3545;
+}
+
+button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+</style>
+<body>
+
+    <form id="adduser" align="center">
+        <table align="center">
+            <h1>add user</h1>
+            <tr>
+                <th>fname</th>
+                 <th><input id="fname" type="text"></th>
+            </tr>
+               <tr>
+                <th>lname</th>
+                 <th><input id="lname" type="text"></th>
+            </tr>
+               <tr>
+                <th>email</th>
+                 <th><input id="email" type="email"></th>
+            </tr>
+               <tr>
+                <th>password</th>
+                 <th><input id="password" type="password"></th>
+            </tr>
+               <tr>
+                <th>mobile</th>
+                 <th><input id="mobile" type="text"></th>
+            </tr>
+             <tr>
+                <th colspan="2">
+                    <button type="submit">Submit</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+
+
+    <form id="edituser" align="center" style="display: none;">
+        <table align="center">
+            <h1>edit user</h1>
+            <tr>
+                <th>fname</th>
+                 <th><input id="editfname" type="text"></th>
+            </tr>
+               <tr>
+                <th>lname</th>
+                 <th><input id="editlname" type="text"></th>
+            </tr>
+               <tr>
+                <th>email</th>
+                 <th><input id="editemail" type="email"></th>
+            </tr>
+               <tr>
+                <th>password</th>
+                 <th><input id="editpassword" type="password"></th>
+            </tr>
+               <tr>
+                <th>mobile</th>
+                 <th><input id="editmobile" type="text"></th>
+            </tr>
+             <tr>
+                <th colspan="2">
+                    <button type="submit">Update</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+
+      <table id="info" align="center" border="1px">
+              <thead>
+                  <tr>
+                      <th>index</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Mobile</th>
+                      <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+         <tbody id="viewdata">
+            </tbody>
+        </table>
+    
+    <script src="crud.js"></script>
+</body>
+</html>
