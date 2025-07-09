@@ -50,6 +50,8 @@ function displayProducts() {
              <h5 class="card-title">${product.name}</h5>
              <p class="card-text">Price: ₹${product.price}</p>
              <a href="#" class="btn btn-primary" onclick="addtocart(${index})">Add to cart</a>
+<a href="#" class="btn btn-danger" onclick="deleteProduct(${index})">Delete</a>
+
            </div>
          </div>
        </div>
@@ -58,16 +60,15 @@ function displayProducts() {
   }
   productList.innerHTML = data;
 }
-
 function addtocart(index) {
   let products = JSON.parse(localStorage.getItem('products')) || [];
   let cartproducts = JSON.parse(localStorage.getItem("cartproduct")) || [];
-  
-  // Check if product already exists in cart
+
   const productToAdd = products[index];
   const exists = cartproducts.some(item => item.id === productToAdd.id);
-  
+
   if (!exists) {
+    productToAdd.quty = 1; // initialize quantity
     cartproducts.push(productToAdd);
     localStorage.setItem("cartproduct", JSON.stringify(cartproducts));
     displaycartProducts();
@@ -76,38 +77,66 @@ function addtocart(index) {
   }
 }
 
+
+function deleteProduct(index) {
+  let products = JSON.parse(localStorage.getItem('products')) || [];
+  products.splice(index, 1);
+  localStorage.setItem('products', JSON.stringify(products));
+  displayProducts();
+}
 function displaycartProducts() {
   let cartproducts = JSON.parse(localStorage.getItem("cartproduct")) || [];
   let data = "";
-  
+  let totalAmount = 0;
+
   if (cartproducts.length === 0) {
     data = `<div class="col-12"><p>Your cart is empty</p></div>`;
   } else {
+    data += `<div class="row">`; // Start the row
+
     cartproducts.forEach((product, index) => {
+      const itemTotal = product.price * product.quty;
+      totalAmount += itemTotal;
+
       data += `
-       <div class="col-4">
-         <div class="card h-100">
-           <img src="${product.url}" class="card-img-top" alt="${product.name}" style="height: 200px; width:300px; object-fit: cover;">
-           <div class="card-body">
-             <h5 class="card-title">${product.name}</h5>
-             <p class="card-text">Price: ₹${product.price}</p>
-              <div class="">
-      <button class="btn btn-outline-primary me-2" onclick="quntitydec(${index})">-</button>
-      <span class="fw-bold" id="quntity">${element.quty}</span>
-      <button class="btn btn-outline-primary ms-2" onclick="quntityadd(${index})">+</button>
-    </div>
-    <div>
-      <h3>₹ ${element.Price * element.quty}</h3>  
-    </div>
-             <a href="#" class="btn btn-danger" onclick="removecart(${index})">Remove</a>
-           </div>
-         </div>
-       </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <img src="${product.url}" class="card-img-top" alt="${product.name}" style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text">Price: ₹${product.price}</p>
+                <div class="mb-2">
+                  <button class="btn btn-outline-primary me-2" onclick="quntitydec(${index})">-</button>
+                  <span class="fw-bold">${product.quty}</span>
+                  <button class="btn btn-outline-primary ms-2" onclick="quntityadd(${index})">+</button>
+                </div>
+                <div>
+                  <h6>Total: ₹${itemTotal.toFixed(2)}</h6>
+                </div>
+              </div>
+              <a href="#" class="btn btn-danger mt-2" onclick="removecart(${index})">Remove</a>
+            </div>
+          </div>
+        </div>
       `;
     });
+
+    // Grand Total column (spanning full width, still within same container)
+    data += `
+      <div class="col-12">
+        <div class="card bg-light p-3 m-4">
+          <h3 class="text-end mb-0">Grand Total: ₹ ${totalAmount.toFixed(2)}</h3>
+        </div>
+      </div>
+    `;
+
+    data += `</div>`; // Close the row
   }
+
   addcartlist.innerHTML = data;
 }
+
 
 function removecart(index) {
   let cartproducts = JSON.parse(localStorage.getItem("cartproduct")) || [];
@@ -116,24 +145,18 @@ function removecart(index) {
   displaycartProducts(); // Fixed: was calling displayProducts() before
 }
 
+function quntityadd(index) {
+  let cartproducts = JSON.parse(localStorage.getItem("cartproduct")) || [];
+  cartproducts[index].quty = Number(cartproducts[index].quty) + 1;
+  localStorage.setItem("cartproduct", JSON.stringify(cartproducts));
+  displaycartProducts();
+}
 
-//  let quntitydec  =  (index)=>{
-//   let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
-//     if(cartproducts[index].quty <=1){
-//       cartproducts[index].quty =1;
-//     }  else{
-//       cartproducts[index].quty  =Number(cartproducts[index].quty) - 1 ;
-//     localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
-
-//     }
-//     displaycartProducts()
-
-//  }
-
-
- let quntityadd  =  (index)=>{
-  let cartproducts = JSON.parse(localStorage.getItem("cartproducts"))
-cartproducts[index].quty  = Number(cartproducts[index].quty) + 1
-    localStorage.setItem("cartproducts",JSON.stringify(cartproducts))
-    displaycartProducts()
- }
+function quntitydec(index) {
+  let cartproducts = JSON.parse(localStorage.getItem("cartproduct")) || [];
+  if (cartproducts[index].quty > 1) {
+    cartproducts[index].quty = Number(cartproducts[index].quty) - 1;
+    localStorage.setItem("cartproduct", JSON.stringify(cartproducts));
+    displaycartProducts();
+  }
+}
