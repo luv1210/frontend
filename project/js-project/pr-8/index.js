@@ -1,54 +1,51 @@
-x
-  // Open the form
-  function openForm() {
-    document.getElementById("cartForm").style.display = "block";
-    document.getElementById("backdrop").style.display = "block";
-  }
+let sname = document.getElementById('productName')
+let price = document.getElementById('productPrice')
+let url = document.getElementById('productURL')
+let productList = document.querySelector('#productList');
+let form = document.getElementById('productForm');
 
-  // Close form and backdrop
-  function closeForm() {
-    document.getElementById("cartForm").style.display = "none";
-    document.getElementById("backdrop").style.display = "none";
-    document.getElementById("productForm").reset();
-  }
 
-  // Show the cart form when cart icon is clicked
-  document.querySelector('.bi-cart3').addEventListener('click', openForm);
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
 
-  // Add product to list
-  document.getElementById('productForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  let products = JSON.parse(localStorage.getItem('products')) || [];
 
-    const imgUrl = document.getElementById('imgUrl').value;
-    const name = document.getElementById('productname').value;
-    const price = document.getElementById('productprice').value;
 
-    const productCard = `
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="${imgUrl}" class="img-fluid rounded-start" alt="Product Image">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">${name}</h5>
-              <p class="card-text">Price: ₹${price}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
+  let product = {
+    id: Date.now(),
+    name: sname.value,
+    price: price.value,
+    url: url.value
+  };
 
-    // Append product to list
-    document.getElementById('productList').insertAdjacentHTML('beforeend', productCard);
+  products.push(product);
+  localStorage.setItem('products', JSON.stringify(products));
 
-    // Close the form after submit
-    closeForm();
+  form.reset();
+  displayProducts();
+});
+
+
+
+
+let displayProducts = () => {
+  let products = JSON.parse(localStorage.getItem('products'))
+  let data = ""
+  products.forEach((product) => {
+    let row = `
+     <div class="col">
+         <div class="card h-100">
+           <img src="${product.url}" class="card-img-top" alt="${product.name}" style="height: 200px; object-fit: cover;">
+           <div class="card-body">
+             <h5 class="card-title">${product.name}</h5>
+             <p class="card-text">Price: ₹${product.price}</p>
+           </div>
+         </div>
+       </div>
+     `
+    data += row
   });
+  productList.innerHTML = data;
+}
 
-  // Initial hide of form and backdrop
-  document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('cartForm').style.display = 'none';
-    document.getElementById('backdrop').style.display = 'none';
-  });
-
+displayProducts()
