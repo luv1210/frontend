@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dog api</title>
+</head>
+<body>
+    <div align="center">
+        <button>random click</button>
+    </div>
+    <div id="dogImage">
+
+    </div>
+    <script>
+        document.querySelector('button').addEventListener("click",()=>{
+            fetch("https://dog.ceo/api/breeds/image/random")
+            .then(res => res.json())
+            .then(data => {
+                let img = document.createElement('img');
+                img.setAttribute('src',data.message)
+                img.setAttribute('height',"250px")
+                img.setAttribute('width',"250px")
+                document.querySelector("#dogImage").prepend(img);
+            })
+             .catch(err => console.log(err.message));
+        })
+
+    </script>
+</body>
+</html>

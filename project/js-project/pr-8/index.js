@@ -5,14 +5,14 @@ let productList = document.querySelector('#productList');
 let form = document.getElementById('productForm');
 let addcartlist = document.getElementById('addcartlist');
 
-// Initialize displays
+
 displayProducts();
 displaycartProducts();
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Basic validation
+
   if (!sname.value || !price.value || !url.value) {
     alert('Please fill in all fields');
     return;
@@ -92,7 +92,7 @@ function displaycartProducts() {
   if (cartproducts.length === 0) {
     data = `<div class="col-12"><p>Your cart is empty</p></div>`;
   } else {
-    data += `<div class="row">`; // Start the row
+    data += `<div class="row">`; 
 
     cartproducts.forEach((product, index) => {
       const itemTotal = product.price * product.quty;
@@ -131,7 +131,7 @@ function displaycartProducts() {
       </div>
     `;
 
-    data += `</div>`; // Close the row
+    data += ``;
   }
 
   addcartlist.innerHTML = data;

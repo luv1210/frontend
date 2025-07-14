@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>India COVID-19 Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🇮🇳 India COVID-19 Stats</h1>
+  <button onclick="getIndiaCovidData()">Get Data</button>
+
+  <div id="result"></div>
+
+  <script>
+    function getIndiaCovidData() {
+      fetch('https://api.rootnet.in/covid19-in/stats/latest')
+        .then(function(response) {
+          if (response.ok) {
+            return response.json();
+          }
+          document.getElementById("result").innerHTML = "Failed to load data.";
+        })
+        .then(function(data) {
+          if (!data) return;
+
+          document.getElementById("result").innerHTML = `
+            <p><strong>Total Cases:</strong> ${data.cases}</p>
+            <p><strong>Today's Cases:</strong> ${data.todayCases}</p>
+            <p><strong>Total Deaths:</strong> ${data.deaths}</p>
+            <p><strong>Recovered:</strong> ${data.recovered}</p>
+            <p><strong>Active Cases:</strong> ${data.active}</p>
+          `;
+        });
+    }
+  </script>
+
+</body>
+</html>
