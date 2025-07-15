@@ -1,55 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>India COVID-19 Tracker</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: white;
-      text-align: center;
-      padding-top: 50px;
-    }
-    #result {
-      margin-top: 20px;
-      font-size: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 India Data</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <h1>🇮🇳 India COVID-19 Stats</h1>
-  <button onclick="getIndiaCovidData()">Get Data</button>
-
-  <div id="result"></div>
-
-  <script>
-    function getIndiaCovidData() {
-      fetch('https://api.rootnet.in/covid19-in/stats/latest')
-        .then(function(response) {
-          if (response.ok) {
-            return response.json();
-          }
-          document.getElementById("result").innerHTML = "Failed to load data.";
-        })
-        .then(function(data) {
-          if (!data) return;
-
-          document.getElementById("result").innerHTML = `
-            <p><strong>Total Cases:</strong> ${data.cases}</p>
-            <p><strong>Today's Cases:</strong> ${data.todayCases}</p>
-            <p><strong>Total Deaths:</strong> ${data.deaths}</p>
-            <p><strong>Recovered:</strong> ${data.recovered}</p>
-            <p><strong>Active Cases:</strong> ${data.active}</p>
-          `;
-        });
-    }
-  </script>
-
+  <div class="container">
+    <h1>COVID-19 India Data</h1>
+    <div class="input-group">
+      <input type="date" id="dateInput" placeholder="Select a date">
+      <button onclick="fetchData()">Get Data</button>
+    </div>
+    <div id="cardsContainer" class="cards-container"></div>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
