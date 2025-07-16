@@ -19,7 +19,7 @@ async function fetchData() {
   
   function displayData(data) {
     let cardsContainer = document.getElementById("cardsContainer");
-    cardsContainer.innerHTML = ""; // Clear previous data
+    cardsContainer.innerHTML = ""; 
   
     data.regional.forEach(state => {
       let card = document.createElement("div");
@@ -27,6 +27,7 @@ async function fetchData() {
   
       card.innerHTML = `
         <h3>${state.loc}</h3>
+        <p><strong>Total Cases:</strong> ${state.totalConfirmed}</p>
         <p><strong>Recovered:</strong> ${state.discharged}</p>
         <p><strong>Deaths:</strong> ${state.deaths}</p>
       `;
