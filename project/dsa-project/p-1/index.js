@@ -50,6 +50,10 @@ console.log(arr.join(" "));
 
 // 3. Ascending Order using Merge Sort
 
+
+let arrayToSort = [5, 3, 8, 4, 2];
+let sortedArray = mergeSort(arrayToSort);
+
 function mergeSort(arr) {
   if (arr.length <= 1) return arr;
 
@@ -73,9 +77,6 @@ function merge(left, right) {
 
   return result.concat(left.slice(i)).concat(right.slice(j));
 }
-
-let arrayToSort = [5, 3, 8, 4, 2];
-let sortedArray = mergeSort(arrayToSort);
 
 console.log("Ascending Order :");
 console.log(sortedArray.join(" "));
