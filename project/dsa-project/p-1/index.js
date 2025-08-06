@@ -3,7 +3,7 @@
 let array = [
   [1, 2, 3],
   [4, 5, 6],
-  [7,8,9]
+  [7, 8, 9]
 ];
 
 console.log("Orignal Array:");
@@ -27,56 +27,64 @@ for(let i = 0;i<array.length;i++){
     console.log(temp);
 }
 
-// 2: Array Descending Order using Selection Sort
-
-let arr = [4, 1, 7, 3, 9];
-
-for (let i = 0; i < arr.length - 1; i++) {
-  let maxIndex = i;
-  for (let j = i + 1; j < arr.length; j++) {
-    if (arr[j] > arr[maxIndex]) {
-      maxIndex = j;
-    }
-  }
- 
-  let temp = arr[i];
-  arr[i] = arr[maxIndex];
-  arr[maxIndex] = temp;
-}
-
-console.log("Descending Order:");
-console.log(arr.join(" "));
+// Output:
+// [ 1, 4, 7 ]
+// [ 2, 5, 8 ]
+// [ 3, 6, 9 ]
 
 
-// 3. Ascending Order using Merge Sort
+// 2.Array Descending order sorting using selection sort
 
 
-let arrayToSort = [5, 3, 8, 4, 2];
-let sortedArray = mergeSort(arrayToSort);
+//  let arr=[12,7,23,5,9,10,15,3,99]
 
-function mergeSort(arr) {
-  if (arr.length <= 1) return arr;
+// for(let i = 0;i<arr.length;i++){
+//   let n = 0 ;
+//   for(let j=i+1;j<arr.length;j++){
+//    if(arr[i]<arr[j]){
+//      n = arr[i];
+//     arr[i] = arr[j]
+//     arr[j] = n
+//    }
+//   }
+// }
 
-  let mid = Math.floor(arr.length / 2);
-  let left = mergeSort(arr.slice(0, mid));
-  let right = mergeSort(arr.slice(mid));
+// console.log(arr)
 
-  return merge(left, right);
-}
+// Output:
+// [99, 23, 15, 12, 10, 9, 7,5 ,3] 
 
-function merge(left, right) {
-  let result = [], i = 0, j = 0;
 
-  while (i < left.length && j < right.length) {
-    if (left[i] <= right[j]) {
-      result.push(left[i++]);
-    } else {
-      result.push(right[j++]);
-    }
-  }
 
-  return result.concat(left.slice(i)).concat(right.slice(j));
-}
+// 3.Array Ascending order sorting using Merge sort
 
-console.log("Ascending Order :");
-console.log(sortedArray.join(" "));
+// let arr = [12, 7, 23, 5, 9, 10, 15, 3, 99];
+
+// let mergesort = (arr) => {
+//   if (arr.length <= 1) return arr;
+
+//   let mid = Math.floor(arr.length / 2);
+//   let left = mergesort(arr.slice(0, mid));
+//   let right = mergesort(arr.slice(mid));
+
+//   return sortiing(left, right); 
+// };
+
+// let sortiing = (left, right) => {
+//   let result = [];
+
+//   while (left.length && right.length) {
+//     if (left[0] < right[0]) {
+//       result.push(left.shift());  
+//     } else {
+//       result.push(right.shift());
+//     }
+//   }
+
+//   return result.concat(left, right);
+// };
+
+// console.log(mergesort(arr)); 
+
+// Output: [3, 5, 7, 9, 10, 12, 15, 23, 99]
+
