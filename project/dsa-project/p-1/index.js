@@ -36,7 +36,7 @@ for(let i = 0;i<array.length;i++){
 // 2.Array Descending order sorting using selection sort
 
 
-//  let arr=[12,7,23,5,9,10,15,3,99]
+//  let arr=[12,7,23,5,9,10,15,99]
 
 // for(let i = 0;i<arr.length;i++){
 //   let n = 0 ;
