@@ -91,8 +91,6 @@ class siglyLink {
         }
     }
 
-    // DELETE IN MEDDAL 
-
     deleteDataMid(position) {
         if (this.head == null) {
             alert("List Is Empty")
