@@ -1,6 +1,6 @@
 // 1. Write a program to implement binary search to find the index of a target element in a sorted array
 
-// let arr = [1, 3, 5, 7, 9, 11];
+// let arr = [1, 3, 5, 11, 23, 33 , 47];
 
 // function binarySearch(arr, target) {
 //     let low = 0;
@@ -20,10 +20,10 @@
 //     return -1; 
 // }
 
-// console.log("Index of 7:", binarySearch(arr, 7));
+// console.log("Index of 7:", binarySearch(arr, 33));
 
 // output:
-// Index of 7: 3
+// Index of 7: 5
 
 
 // 2. write a program to find the first and last occurrence of a target element using the lower and upper bound methods. also return the count of occurrences.
@@ -81,23 +81,3 @@
 
 // 3. Write a program to find the pivot index where the rotation occurs in a rotated sorted array
 
-// let arr = [15, 18, 20, 3, 6, 12];
-
-// function findPivot(arr) {
-//     let low = 0, high = arr.length - 1;
-
-//     while (low < high) {
-//         let mid = Math.floor((low + high) / 2);
-
-//         if (arr[mid] > arr[high]) {
-//             low = mid + 1; 
-//         } else {
-//             high = mid; 
-//         }
-//     }
-//     return low; 
-// }
-// console.log("Pivot index:", findPivot(arr));
-
-// output:
-// Pivot index: 3
