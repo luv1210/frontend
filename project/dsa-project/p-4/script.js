@@ -1,45 +1,46 @@
-// 1.Write a program for Stack Operation Program (Insert, Delete, isEmpty, Length) 
+// 1.Write a program for Stack Operation Program (Insert, pop, isEmpty, Length) 
 
-// class Stack {
-//   constructor() {
-//     this.items = [];
-//   }
+class Stack {
+  constructor() {
+    this.items = [];
+  }
 
-//   add(element) {
-//     this.items.add(element);
-//   }
+  push(element) {
+    this.items.push(element);
+  }
 
-//   delete() {
-//     if (this.isEmpty()) {
-//       return "Stack is empty!";
-//     }
-//     return this.items.delete();
-//   }
+  pop() {
+    if (this.isEmpty()) {
+      return "Stack is empty!";
+    }
+    return this.items.pop();
+  }
 
-//   isEmpty() {
-//     return this.items.length === 0;
-//   }
+  isEmpty() {
+    return this.items.length === 0;
+  }
 
-//   length() {
-//     return this.items.length;
-//   }
-// }
+  length() {
+    return this.items.length;
+  }
+}
 
-// let stack = new Stack();
+let stack = new Stack();
 
-// stack.add(10);
-// stack.add(20);
-// stack.add(30);
+stack.push(10);
+stack.push(20);
+stack.push(30);
 
-// console.log("Stack length:", stack.length()); 
-// console.log("Deleted element:", stack.delete()); 
-// console.log("Stack length:", stack.length()); 
-// console.log("Is stack empty?", stack.isEmpty()); 
+console.log("Stack length:", stack.length()); 
+console.log("delete element:", stack.pop()); 
+console.log("Stack length:", stack.length()); 
+console.log("Is stack empty?", stack.isEmpty()); 
+
 
 // output:
 
 // Stack length: 3
-// Deleted element: 30
+// popd element: 30
 // Stack length: 2
 // Is stack empty? false
 
@@ -75,22 +76,22 @@
 
 // 3.reverse string using stack
 
-function reverseStringUsingStack(str) {
-  let stack = [];
-  let reversed = "";
+// function reverseStringUsingStack(str) {
+//   let stack = [];
+//   let reversed = "";
 
-  for (let i = 0; i < str.length; i++) {
-    stack.push(str[i]);
-  }
+//   for (let i = 0; i < str.length; i++) {
+//     stack.push(str[i]);
+//   }
 
-  while (stack.length > 0) {
-    reversed += stack.pop();
-  }
+//   while (stack.length > 0) {
+//     reversed += stack.pop();
+//   }
 
-  return reversed;
-}
+//   return reversed;
+// }
 
-console.log(reverseStringUsingStack("hello"));
+// console.log(reverseStringUsingStack("hello"));
 
 // output:
 // olleh
