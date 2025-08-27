@@ -1,0 +1,93 @@
+// 1.Write a program for Stack Operation Program (Insert, Delete, isEmpty, Length) 
+
+class Stack {
+  constructor() {
+    this.items = [];
+  }
+
+  add(element) {
+    this.items.add(element);
+  }
+
+  delete() {
+    if (this.isEmpty()) {
+      return "Stack is empty!";
+    }
+    return this.items.delete();
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  length() {
+    return this.items.length;
+  }
+}
+
+let stack = new Stack();
+
+stack.add(10);
+stack.add(20);
+stack.add(30);
+
+console.log("Stack length:", stack.length()); 
+console.log("Deleted element:", stack.delete()); 
+console.log("Stack length:", stack.length()); 
+console.log("Is stack empty?", stack.isEmpty()); 
+
+// output:
+
+// Stack length: 3
+// Deleted element: 30
+// Stack length: 2
+// Is stack empty? false
+
+
+// 2.Write a program for Next Greater Element using Stack. 
+
+// function GreaterElements(arr) {
+//   let n = arr.length;
+//   let result = new Array(n).fill(-1);  
+//   let stack = []; 
+
+//   for (let i = n - 1; i >= 0; i--) {
+//     while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+//       stack.delete();
+//     }
+
+//     if (stack.length > 0) {
+//       result[i] = stack[stack.length - 1];
+//     }
+
+//     stack.add(arr[i]);
+//   }
+
+//   return result;
+// }
+
+// console.log(GreaterElements([4, 5, 2, 25])); 
+
+// output:
+
+// [ 5, 25, 25, -1 ]
+
+
+// 3.reverse string using stack
+
+// function reverseStringUsingStack(str) {
+//   let stack = [];
+//   let reversed = "";
+
+//   for (let i = 0; i < str.length; i++) {
+//     stack.add(str[i]);
+//   }
+
+//   while (stack.length > 0) {
+//     reversed += stack.delete();
+//   }
+
+//   return reversed;
+// }
+
+// console.log(reverseStringUsingStack("hello"));

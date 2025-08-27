@@ -81,23 +81,23 @@
 
 // 3. Write a program to find the pivot index where the rotation occurs in a rotated sorted array
 
-let arr = [4, 5, 6, 7, 0, 1, 2];
+// let arr = [4, 5, 6, 7, 0, 1, 2];
 
-function findPivot(arr) {
-  let start = 0;
-  let end = arr.length - 1;
+// function findPivot(arr) {
+//   let start = 0;
+//   let end = arr.length - 1;
 
-  while (start < end) {
-    let mid = Math.floor((start + end) / 2);
+//   while (start < end) {
+//     let mid = Math.floor((start + end) / 2);
 
-    if (arr[mid] > arr[end]) {
-      start = mid + 1;
-    } else {
-      end = mid;
-    }
-  }
-  return start;
-}
+//     if (arr[mid] > arr[end]) {
+//       start = mid + 1;
+//     } else {
+//       end = mid;
+//     }
+//   }
+//   return start;
+// }
 
-console.log("Pivot index:", findPivot(arr));
+// console.log("Pivot index:", findPivot(arr));
  // Output: 4

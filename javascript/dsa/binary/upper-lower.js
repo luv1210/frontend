@@ -1,3 +1,5 @@
+let arr = [10, 20, 20, 30, 40];
+
 function lowerBound(arr, target) {
     let low = 0, high = arr.length;
     while (low < high) {
@@ -8,7 +10,7 @@ function lowerBound(arr, target) {
             high = mid;
         }
     }
-    return low; // index of first element >= target
+    return low; 
 }
 
 function upperBound(arr, target) {
@@ -21,11 +23,9 @@ function upperBound(arr, target) {
             high = mid;
         }
     }
-    return low; // index of first element > target
+    return low; 
 }
 
-// Example usage
-let arr = [10, 20, 20, 30, 40];
 
 console.log("Lower Bound of 20:", lowerBound(arr, 20)); // 1
 console.log("Upper Bound of 20:", upperBound(arr, 20)); // 3
